@@ -1,0 +1,20 @@
+[phases.setup]
+nixPkgs = ["postgresql", "gcc"]
+aptPkgs = [
+  "python3-dev", 
+  "python3-pip", 
+  "python3-venv"
+]
+
+[phases.install]
+cmds = [
+  "python -m pip install --upgrade pip",
+  "python -m pip install wheel",
+  "python -m pip install -r requirements-railway.txt"
+]
+
+[phases.build]
+cmds = ["echo 'Build completed successfully'"]
+
+[start]
+cmd = "python init_db.py && python run.py --host 0.0.0.0 --port $PORT" 

@@ -1,0 +1,27 @@
+# Ignore file with UTF-8 encoding issues
+tests/db/__init__.py
+
+# Existing content 
+
+# Python bytecode / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environment and local settings
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db 

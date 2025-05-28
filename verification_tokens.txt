@@ -1,0 +1,385 @@
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 48820faa-ed86-4896-b94d-55fc03e96d90
+Email: token_test_1741926496@edu.pk
+Token: jLGxUCh763Zigpo5T1NA32vMsXoCQfJ9Tlof4HGy7fk
+Verification link: http://localhost:8000/api/v1/auth/verify-email/jLGxUCh763Zigpo5T1NA32vMsXoCQfJ9Tlof4HGy7fk
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: fc515142-8809-447e-9bc1-c859759658c3
+Email: token_test_1741926664@edu.pk
+Token: bAo1lXMlHxwHONEJbhs3nXBTbKxKXZ-ZYruEJEcyFcQ
+Verification link: http://localhost:8000/api/v1/auth/verify-email/bAo1lXMlHxwHONEJbhs3nXBTbKxKXZ-ZYruEJEcyFcQ
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: a39557dc-59cd-44bc-ac36-d0f3065b007c
+Email: verify_test_1741926850@edu.pk
+Token: phvwkosgxYObueJYeqYT3swCo0vRLnuE4ruvLHCS-fY
+Verification link: http://localhost:8000/api/v1/auth/verify-email/phvwkosgxYObueJYeqYT3swCo0vRLnuE4ruvLHCS-fY
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: b0bb02c9-b99c-4777-a033-a496de167126
+Email: user_mgmt_script@edu.pk
+Token: BEzkWpm14p47I_sQS-XASuhPuFnqseCSRxOjdPGnvEY
+Verification link: http://localhost:8000/api/v1/auth/verify-email/BEzkWpm14p47I_sQS-XASuhPuFnqseCSRxOjdPGnvEY
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: c28eae69-7e7c-435d-879b-e3f7ec3fec02
+Email: posts_test@edu.pk
+Token: YmPaYneZDGxigezbBK5tlLm0ZgVN9XgSBnjHMrvsWJ4
+Verification link: http://localhost:8000/api/v1/auth/verify-email/YmPaYneZDGxigezbBK5tlLm0ZgVN9XgSBnjHMrvsWJ4
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 74c936db-e454-416b-8462-a62968e28877
+Email: comments_test@edu.pk
+Token: M1YjdrQ8L9JCEQ4J-AWj29fVfAzteZwhG6siKISaLMs
+Verification link: http://localhost:8000/api/v1/auth/verify-email/M1YjdrQ8L9JCEQ4J-AWj29fVfAzteZwhG6siKISaLMs
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 61d55c75-c4ef-4c2c-b99c-7bac04becdf6
+Email: comment_test_comprehensive@edu.pk
+Token: TBk0u89ju4fsMCfLNaATvSJmrA_cJiP1PU0BSUs2p5M
+Verification link: http://localhost:8000/api/v1/auth/verify-email/TBk0u89ju4fsMCfLNaATvSJmrA_cJiP1PU0BSUs2p5M
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: c5bb2d9a-2315-4ff6-b6e7-627d6581f5c9
+Email: comment_creation_test@edu.pk
+Token: Q975I7tyHzRzYcRK3JymPYpf8i0zUn-NU7A0p4uOtDg
+Verification link: http://localhost:8000/api/v1/auth/verify-email/Q975I7tyHzRzYcRK3JymPYpf8i0zUn-NU7A0p4uOtDg
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 961da317-f74a-4345-96a5-1a19b04bdd90
+Email: reaction_test_comprehensive@edu.pk
+Token: IPouBtrFJUWi1bIAgrT1Csdg7fdA9QytoGwHOVCrLCc
+Verification link: http://localhost:8000/api/v1/auth/verify-email/IPouBtrFJUWi1bIAgrT1Csdg7fdA9QytoGwHOVCrLCc
+================================================================================
+
+User: reaction_test_comprehensive (ID: 961da317-f74a-4345-96a5-1a19b04bdd90)
+Email: reaction_test_comprehensive@edu.pk
+Verified: Yes
+--------------------------------------------------
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 22dced84-3846-450e-b8d3-95cde7ac9458
+Email: friendship_test_user@edu.pk
+Token: DwLAnKWDT0GNtCcF9BR8rp6w-DK7HuN8h8SAt-AcCMg
+Verification link: http://localhost:8000/api/v1/auth/verify-email/DwLAnKWDT0GNtCcF9BR8rp6w-DK7HuN8h8SAt-AcCMg
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: ab527b6b-c84c-4d7d-acad-74f4925b94f8
+Email: friendship_test_friend@edu.pk
+Token: CY1w0CV79TxYkfsDnBNLNJjILLGQB6gxpSV8RJENlic
+Verification link: http://localhost:8000/api/v1/auth/verify-email/CY1w0CV79TxYkfsDnBNLNJjILLGQB6gxpSV8RJENlic
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: df83c929-13a1-46b1-accb-7479d98567c3
+Email: notification_test_user@edu.pk
+Token: jUmvvXEeCQQUwdhNxmNvmpC51YQhlJPtkAHMXSQiGr4
+Verification link: http://localhost:8000/api/v1/auth/verify-email/jUmvvXEeCQQUwdhNxmNvmpC51YQhlJPtkAHMXSQiGr4
+================================================================================
+
+User: notification_test_user (ID: df83c929-13a1-46b1-accb-7479d98567c3)
+Email: notification_test_user@edu.pk
+Verified: Yes
+--------------------------------------------------
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 3c663a18-ceac-46c0-a1e8-8e49f838b36e
+Email: notification_test_friend@edu.pk
+Token: 9fygM27JSMkJhpwb4T0fLeEdPz2xezfBXea_PNxrLkg
+Verification link: http://localhost:8000/api/v1/auth/verify-email/9fygM27JSMkJhpwb4T0fLeEdPz2xezfBXea_PNxrLkg
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: bd11a2eb-ddd9-4f5a-a7a0-a53dbfedbfec
+Email: feed_test_vvithlcx@edu.pk
+Token: sfxmxPuWCI5ubwZAsRHd0tyUAdYYjsq12re4Zb4o6sM
+Verification link: http://localhost:8000/api/v1/auth/verify-email/sfxmxPuWCI5ubwZAsRHd0tyUAdYYjsq12re4Zb4o6sM
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 573631cd-05aa-4a03-b9a1-a6629d14e3c5
+Email: feed_friend_vvithlcx@edu.pk
+Token: 7DT4g9qSPuMz7QP3TWfR0xPRAtw4vjd72GN58vcweWs
+Verification link: http://localhost:8000/api/v1/auth/verify-email/7DT4g9qSPuMz7QP3TWfR0xPRAtw4vjd72GN58vcweWs
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 0d505e17-552f-4706-897b-ad0473410c8c
+Email: feed_test_yydoiwob@edu.pk
+Token: 2CnBBHac_l2ftirrnAgLLOjbsdMt_gekPG9BqVtf5wM
+Verification link: http://localhost:8000/api/v1/auth/verify-email/2CnBBHac_l2ftirrnAgLLOjbsdMt_gekPG9BqVtf5wM
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 379cf1f8-42a8-43f1-9a6f-6819b988b63c
+Email: feed_friend_yydoiwob@edu.pk
+Token: RQPBY8q9sn8g1XKfC9DbPsYvKgXk5cTeHDLjQIdyEEI
+Verification link: http://localhost:8000/api/v1/auth/verify-email/RQPBY8q9sn8g1XKfC9DbPsYvKgXk5cTeHDLjQIdyEEI
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: e5cc887b-5d03-41d7-9f80-c411936d136b
+Email: feed_test_sqperzwy@edu.pk
+Token: v6hkefBVirCMiuPSrPk0RNwXzxqBBlhEhDQUuqp8Jho
+Verification link: http://localhost:8000/api/v1/auth/verify-email/v6hkefBVirCMiuPSrPk0RNwXzxqBBlhEhDQUuqp8Jho
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: dbdd5f39-f8f2-499c-a48f-7b420bccc1a7
+Email: feed_friend_sqperzwy@edu.pk
+Token: g36j0tZgs9S2U_UL3e_lupy96Nih1hZx2zcXP0z-A4I
+Verification link: http://localhost:8000/api/v1/auth/verify-email/g36j0tZgs9S2U_UL3e_lupy96Nih1hZx2zcXP0z-A4I
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 06871fa5-ab98-470c-91dd-044f0b29d531
+Email: feed_test_bkylnhkq@edu.pk
+Token: j75NeS1zQp2jpzwwASTFDY08DDLIYDCuPr0x2fEpcIk
+Verification link: http://localhost:8000/api/v1/auth/verify-email/j75NeS1zQp2jpzwwASTFDY08DDLIYDCuPr0x2fEpcIk
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 22e9c298-e0a8-4521-b7b1-02643320ca30
+Email: feed_friend_bkylnhkq@edu.pk
+Token: WjtCvSHYvPYXv5HjDQb-4wGr40eUybftqFUnfXyt2r4
+Verification link: http://localhost:8000/api/v1/auth/verify-email/WjtCvSHYvPYXv5HjDQb-4wGr40eUybftqFUnfXyt2r4
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: fded7142-d13c-46e3-88d7-50b10fdb31f7
+Email: feed_test_ytfwspev@edu.pk
+Token: ELUgMtm2HJwLF1ugzJ_AXGm2o7XbNtN166yY0T9vzlU
+Verification link: http://localhost:8000/api/v1/auth/verify-email/ELUgMtm2HJwLF1ugzJ_AXGm2o7XbNtN166yY0T9vzlU
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 1d0fdde8-844b-49f1-9020-5b546a30bb4c
+Email: feed_friend_ytfwspev@edu.pk
+Token: gQ_9HBSCfDEl2VVJLVIuxe9XKFuI264_j0Gr1ZRV4mQ
+Verification link: http://localhost:8000/api/v1/auth/verify-email/gQ_9HBSCfDEl2VVJLVIuxe9XKFuI264_j0Gr1ZRV4mQ
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: f01d0d37-c5b2-4904-8772-baaf6d434fcf
+Email: feed_test_fixed@edu.pk
+Token: qnh5zghJNe4wW08ZSkLO4RbGg7JL_dS32QnX0QkqrMo
+Verification link: http://localhost:8000/api/v1/auth/verify-email/qnh5zghJNe4wW08ZSkLO4RbGg7JL_dS32QnX0QkqrMo
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 6a61ec05-85b1-4317-9ff9-48074f6423b8
+Email: feed_friend_fixed@edu.pk
+Token: kJsfThL1H0oQ1T147hBiBdNc5M4jGALX5x_FqYV1TJA
+Verification link: http://localhost:8000/api/v1/auth/verify-email/kJsfThL1H0oQ1T147hBiBdNc5M4jGALX5x_FqYV1TJA
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 6693c3a6-4f6e-4719-b2c5-007c5725f625
+Email: hi@edu.pk
+Token: EwFKXGZ7Rh2YLmW4wdeABilhV_bMuQ-YhPQzT9LW6VE
+Verification link: http://localhost:8000/api/v1/auth/verify-email/EwFKXGZ7Rh2YLmW4wdeABilhV_bMuQ-YhPQzT9LW6VE
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: f8417d21-8b5a-49da-acb7-6cc61bf4d334
+Email: B22F0108AI045@fecid.paf-iast.edu.pk
+Token: 80KRq8AYY348Iysl9NA3AQoRgc0KCCJlFWiGDML-jkQ
+Verification link: http://localhost:8000/api/v1/auth/verify-email/80KRq8AYY348Iysl9NA3AQoRgc0KCCJlFWiGDML-jkQ
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: d33bfeae-f04a-48e9-a89d-47b59ce7bf5a
+Email: hello@edu.pk
+Token: UzipJq1k3Ya3yDDn1O1EiiR_C2PLV3VkyKe1psWnFeI
+Verification link: http://localhost:8000/api/v1/auth/verify-email/UzipJq1k3Ya3yDDn1O1EiiR_C2PLV3VkyKe1psWnFeI
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 39fc55d1-b32b-4d31-a358-a80fa4a17fe6
+Email: bye@edu.pk
+Token: CLKoZBuMI2cZMaD1QT6IjZDpUd5YNKl4SAKoZy-Qi8g
+Verification link: http://localhost:8000/api/v1/auth/verify-email/CLKoZBuMI2cZMaD1QT6IjZDpUd5YNKl4SAKoZy-Qi8g
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: e6ef1727-9184-4a41-9319-abfa51f3e0f2
+Email: mohiz4037@edu.pk
+Token: dnIQPq4p2MApvoHymNSix_kUgE8aC1rLRBKFXNipskQ
+Verification link: http://localhost:8000/api/v1/auth/verify-email/dnIQPq4p2MApvoHymNSix_kUgE8aC1rLRBKFXNipskQ
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 1a33410e-4e1d-4bdd-8fa0-42e82fad4d67
+Email: waleed@paf.edu.pk
+Token: iGyxRVLv83sdE6BNJ7Yloy9vOPzq1Xstu99kBT0TpCM
+Verification link: http://localhost:8000/api/v1/auth/verify-email/iGyxRVLv83sdE6BNJ7Yloy9vOPzq1Xstu99kBT0TpCM
+================================================================================
+
+================================================================================
+VERIFICATION TOKEN GENERATED
+User ID: 5ace47d7-9ee8-4fcd-aed9-96571925fc99
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+Token: v47zZLnwmBtLyt4oaAgyQmqCgHXKdMfhahZ401632L8
+Verification link: http://localhost:3000/verify-email?token=v47zZLnwmBtLyt4oaAgyQmqCgHXKdMfhahZ401632L8
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: dee594f6-7de6-4aa4-9ed8-39ff56f0f1c7
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 133835
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: 81d9e793-d0f3-4967-a235-20619c2e75e2
+Email: abdulmohiz@fecid.paf-iast.edu.pk
+OTP: 960017
+================================================================================
+OTP was generated but I didn't received it on my real email account, how can I receive it there
+================================================================================
+OTP GENERATED
+User ID: 9a9c2bb7-f87b-465b-9635-055c04854b0a
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 228240
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: a896c059-3d00-47fa-bf4c-f7f5c9ce4074
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 503939
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: d15037ff-f269-4dc1-9705-749f680bb27c
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 438367
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: e8644b39-9409-419e-a482-66328a027e09
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 779390
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: 8849828a-d45d-4487-ad52-37f570dfeb77
+Email: test@fecid.paf-iast.edu.pk
+OTP: 158812
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: 509a3208-e18a-4593-9c5b-2949770cada9
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 774794
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: e9c7dff6-6a8b-4d7b-a5c0-7dbaba6223a4
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 907311
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: 8861e96b-e793-46c4-a60b-8861f048bc80
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 357095
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: 94f58ab2-fc21-4422-9e26-e8428d1d69a6
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 801550
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: 2393f1dc-6aa7-4bee-acde-14a704288af2
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 104529
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: 534b8987-0ce4-4c0e-b4b4-192993c4e4d9
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 694936
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: 318227b9-b43f-4d1a-8de3-8e81e6b62372
+Email: b22f0108ai045@fecid.paf-iast.edu.pk
+OTP: 305322
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: de2001a3-d878-4212-b68e-bb0e208bec81
+Email: notification_test_user@fecid.paf-iast.edu.pk
+OTP: 295070
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: d2957691-3b9b-40bc-8825-6280dce8d3cb
+Email: abc@fecid.paf-iast.edu.pk
+OTP: 936765
+================================================================================
+
+================================================================================
+OTP GENERATED
+User ID: cd53b266-b50e-4c55-a79d-b4697aab74d0
+Email: xyz@fecid.paf-iast.edu.pk
+OTP: 416163
+================================================================================
