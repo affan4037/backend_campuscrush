@@ -26,3 +26,4 @@ ENV/
 .DS_Store
 Thumbs.db firebase-service-account.json
 firebase-service-account.json
+firebase-service-account.json
