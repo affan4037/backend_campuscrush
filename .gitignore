@@ -24,4 +24,5 @@ ENV/
 
 # OS specific files
 .DS_Store
-Thumbs.db 
+Thumbs.db firebase-service-account.json
+firebase-service-account.json
