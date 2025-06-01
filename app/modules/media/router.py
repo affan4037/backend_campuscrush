@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi.responses import StreamingResponse
-from ..core.storage import r2_storage
-from ..core.config import settings
+from app.core.storage import r2_storage
+from app.core.config import settings
 from .service import MediaService
 import logging
 

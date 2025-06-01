@@ -11,7 +11,7 @@ from app.modules.notifications.schemas.notification import (
     Notification as NotificationSchema,
     NotificationUpdate
 )
-from services.notification import (
+from app.modules.notifications.services.notification import (
     get_notification,
     get_user_notifications,
     update_notification,

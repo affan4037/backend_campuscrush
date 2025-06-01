@@ -1,4 +1,4 @@
-from ..core.storage import R2Storage
+from app.core.storage import R2Storage
 from fastapi import UploadFile, HTTPException
 import logging
 from pathlib import Path
