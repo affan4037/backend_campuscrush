@@ -2,6 +2,7 @@ from typing import List, Optional
 import uuid
 from sqlalchemy.orm import Session
 from sqlalchemy import func
+import logging
 
 from app.modules.posts.models.post import Post
 from app.modules.posts.schemas.post import PostCreate, PostUpdate, PostWithCounts
@@ -10,14 +11,17 @@ from app.modules.posts.reactions.models.reaction import Reaction
 
 def get_post(db: Session, post_id: str) -> Optional[Post]:
     """Get post by ID"""
+    logging.info(f"Getting post with ID: {post_id}")
     return db.query(Post).filter(Post.id == post_id).first()
 
 def get_posts(db: Session, skip: int = 0, limit: int = 20) -> List[Post]:
     """Get list of posts"""
+    logging.info(f"Getting posts with skip={skip}, limit={limit}")
     return db.query(Post).order_by(Post.created_at.desc()).offset(skip).limit(limit).all()
 
 def get_posts_with_counts(db: Session, skip: int = 0, limit: int = 20) -> List[PostWithCounts]:
     """Get list of posts with comment and reaction counts"""
+    logging.info(f"Getting posts with counts with skip={skip}, limit={limit}")
     posts = get_posts(db, skip, limit)
     result = []
     
@@ -41,6 +45,7 @@ def get_posts_with_counts(db: Session, skip: int = 0, limit: int = 20) -> List[P
 
 def get_user_posts(db: Session, user_id: str, skip: int = 0, limit: int = 20) -> List[Post]:
     """Get posts by user ID"""
+    logging.info(f"Getting posts for user ID: {user_id} with skip={skip}, limit={limit}")
     return (
         db.query(Post)
         .filter(Post.author_id == user_id)
@@ -52,6 +57,7 @@ def get_user_posts(db: Session, user_id: str, skip: int = 0, limit: int = 20) ->
 
 def create_post(db: Session, post_in: PostCreate, author_id: str) -> Post:
     """Create new post"""
+    logging.info(f"Creating post for author ID: {author_id}")
     post = Post(
         id=str(uuid.uuid4()),
         author_id=author_id,
@@ -64,6 +70,7 @@ def create_post(db: Session, post_in: PostCreate, author_id: str) -> Post:
 
 def update_post(db: Session, post: Post, post_in: PostUpdate) -> Post:
     """Update post"""
+    logging.info(f"Updating post with ID: {post.id}")
     # Get the post from the current session to avoid session conflicts
     db_post = db.query(Post).filter(Post.id == post.id).first()
     if not db_post:
@@ -85,6 +92,7 @@ def delete_post(db: Session, post: Post) -> Post:
     """
     Delete post and all associated comments and reactions
     """
+    logging.info(f"Deleting post with ID: {post.id}")
     # Delete associated reactions and comments first to maintain referential integrity
     db.query(Reaction).filter(Reaction.post_id == post.id).delete()
     db.query(Comment).filter(Comment.post_id == post.id).delete()
