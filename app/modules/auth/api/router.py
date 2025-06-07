@@ -23,7 +23,7 @@ async def google_signin(
     success, result = authenticate_with_google(db, google_signin)
     
     if not success:
-        error_msg = result.get("error", AUTHENTICATION_FAILED)
+        error_msg = result.get("error", "Authentication failed")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail=error_msg,

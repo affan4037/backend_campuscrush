@@ -83,45 +83,6 @@ app.add_middleware(
 for directory in ["uploads/profile_pictures", "uploads/post_media"]:
     Path(directory).mkdir(parents=True, exist_ok=True)
 
-# Mount static files directory
-app.mount(f"{settings.API_V1_STR}/static", StaticFiles(directory="uploads"), name="static")
-
-# Alternative media endpoint using local storage
-@app.get(f"{settings.API_V1_STR}/media/{{path:path}}")
-async def serve_local_media(path: str):
-    try:
-        file_path = Path("uploads") / path
-        if not file_path.exists():
-            raise HTTPException(status_code=404, detail="File not found")
-        
-        content_type = "application/octet-stream"
-        if path.lower().endswith(('.jpg', '.jpeg')):
-            content_type = "image/jpeg"
-        elif path.lower().endswith('.png'):
-            content_type = "image/png"
-        elif path.lower().endswith('.gif'):
-            content_type = "image/gif"
-        
-        headers = {
-            "Cache-Control": "public, max-age=86400",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, OPTIONS",
-            "Access-Control-Allow-Headers": "Origin, Content-Type, Accept",
-            "Content-Disposition": f"inline; filename={path.split('/')[-1]}"
-        }
-        
-        with open(file_path, "rb") as f:
-            content = f.read()
-        
-        return StreamingResponse(
-            iter([content]),
-            media_type=content_type,
-            headers=headers
-        )
-    except Exception as e:
-        logger.error(f"Failed to retrieve local file: {str(e)}")
-        raise HTTPException(status_code=404, detail="File not found")
-
 # Register API routers
 app.include_router(auth_router, prefix=f"{settings.API_V1_STR}/auth", tags=["authentication"])
 app.include_router(user_router, prefix=f"{settings.API_V1_STR}/users", tags=["users"])
@@ -138,6 +99,11 @@ def health_check():
     """Health check endpoint"""
     return {"status": "ok"}
 
+@app.get("/api/health")
+def api_health_check_root():
+    """API health check endpoint for /api/health (non-versioned)"""
+    return {"status": "ok"}
+                                   
 @app.get("/")
 async def root():
     return {
@@ -149,4 +115,4 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=settings.DEBUG) 
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True) 

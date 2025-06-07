@@ -19,6 +19,7 @@ from app.modules.friendships.services.friendship import get_friends, check_frien
 from app.modules.friendships.models.friendship import Friendship
 from app.core.storage import r2_storage
 from app.modules.posts.services.post import get_user_posts
+from app.modules.media.service import MediaService
 
 
 
@@ -111,6 +112,8 @@ def search_users(
     
     return results
 
+media_service = MediaService(r2_storage)
+
 @router.post("/profile-picture", response_model=dict)
 async def upload_profile_picture(
     *,
@@ -121,64 +124,21 @@ async def upload_profile_picture(
     """Upload a profile picture for the current user"""
     allowed_extensions = [".jpg", ".jpeg", ".png"]
     file_extension = os.path.splitext(profile_picture.filename)[1].lower()
-    
     if file_extension not in allowed_extensions:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Unsupported file format. Please use one of: {', '.join(allowed_extensions)}"
         )
-    
     try:
-        # Upload to R2 storage with the user's ID as part of the filename
-        # This ensures we can easily identify which user the profile picture belongs to
-        original_filename = profile_picture.filename
+        # Use MediaService for upload
         profile_picture.filename = f"{current_user.id}{file_extension}"
-        
-        # Whether we successfully used R2
-        used_r2 = False
-        profile_picture_url = None
-        
-        # Try R2 upload first
-        if r2_storage.client:
-            try:
-                # Upload to R2 with profile_pictures prefix
-                profile_picture_url = await r2_storage.upload_file(
-                    profile_picture, 
-                    prefix="profile_pictures"
-                )
-                used_r2 = True
-                logger.info(f"Uploaded profile picture to R2: {profile_picture_url}")
-            except Exception as r2_error:
-                logger.error(f"Failed to upload to R2: {r2_error}")
-        else:
-            logger.warning("R2 storage not configured")
-        
-        # If R2 upload fails or not configured, fall back to local storage
-        if not used_r2:
-            logger.warning("Falling back to local storage for profile picture")
-            upload_dir = Path("uploads/profile_pictures")
-            upload_dir.mkdir(parents=True, exist_ok=True)
-            
-            unique_filename = f"{current_user.id}{file_extension}"
-            file_path = upload_dir / unique_filename
-            
-            with open(file_path, "wb") as buffer:
-                await profile_picture.seek(0)
-                shutil.copyfileobj(profile_picture.file, buffer)
-            
-            # Use Railway URL if in production
-            base_url = settings.BASE_URL
-            profile_picture_url = f"{base_url}{settings.API_V1_STR}/static/profile_pictures/{unique_filename}"
-            logger.info(f"Generated local storage URL: {profile_picture_url}")
-        
+        profile_picture_url = await media_service.upload_media(profile_picture, "profile_pictures")
         # Update user's profile picture in database
         update_user(db, current_user, UserUpdate(profile_picture=profile_picture_url))
-        
-        storage_type = "Cloudflare R2" if used_r2 else "local storage"
         return {
-            "message": f"Profile picture uploaded successfully using {storage_type}",
+            "message": "Profile picture uploaded successfully",
             "profile_picture_url": profile_picture_url,
-            "storage_type": storage_type
+            "storage_type": "media module"
         }
     except Exception as e:
         logger.error(f"Error uploading profile picture: {e}")

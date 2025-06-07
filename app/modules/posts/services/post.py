@@ -3,16 +3,35 @@ import uuid
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 import logging
+import os
+import re
 
 from app.modules.posts.models.post import Post
 from app.modules.posts.schemas.post import PostCreate, PostUpdate, PostWithCounts
 from app.modules.posts.comments.models.comment import Comment
 from app.modules.posts.reactions.models.reaction import Reaction
+from app.core.config import settings
+
+def _fix_media_url(media_url: str) -> str:
+    """If R2 is configured, always rewrite any local/proxy/static URL to the R2 public URL."""
+    if not media_url:
+        return media_url
+    if settings.R2_PUBLIC_URL:
+        # Extract the filename from any known pattern
+        # Match /static/post_media/ or /media/post_media/ or /post_media/ or just the filename
+        match = re.search(r"(?:/static/post_media/|/media/post_media/|/post_media/)?([a-f0-9]{32,}[^/?]*)", media_url)
+        if match:
+            filename = match.group(1)
+            return f"{settings.R2_PUBLIC_URL}/post_media/{filename}"
+    return media_url
 
 def get_post(db: Session, post_id: str) -> Optional[Post]:
     """Get post by ID"""
     logging.info(f"Getting post with ID: {post_id}")
-    return db.query(Post).filter(Post.id == post_id).first()
+    post = db.query(Post).filter(Post.id == post_id).first()
+    if post and post.media_url:
+        post.media_url = _fix_media_url(post.media_url)
+    return post
 
 def get_posts(db: Session, skip: int = 0, limit: int = 20) -> List[Post]:
     """Get list of posts"""
@@ -38,6 +57,10 @@ def get_posts_with_counts(db: Session, skip: int = 0, limit: int = 20) -> List[P
         # Remove SQLAlchemy state
         if "_sa_instance_state" in post_dict:
             del post_dict["_sa_instance_state"]
+            
+        # Fix media_url if needed
+        if post_dict.get("media_url"):
+            post_dict["media_url"] = _fix_media_url(post_dict["media_url"])
             
         result.append(PostWithCounts(**post_dict))
     

@@ -25,4 +25,6 @@ async def serve_media(path: str, media_service: MediaService = Depends(get_media
         raise e
     except Exception as e:
         logger.error(f"An unexpected error occurred while serving media file {path}: {str(e)}")
-        raise HTTPException(status_code=500, detail="An unexpected error occurred while serving media file.") 
+        raise HTTPException(status_code=500, detail="An unexpected error occurred while serving media file.")
+
+# This router should be the only handler for media endpoints. 

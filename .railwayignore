@@ -1,9 +1,0 @@
-# Directories not needed for production
-tests/
-__pycache__/
-.pytest_cache/
-
-# Development files
-.git/
-.github/
-*.pyc 

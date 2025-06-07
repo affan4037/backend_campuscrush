@@ -3,6 +3,8 @@ from fastapi import UploadFile, HTTPException
 import logging
 from pathlib import Path
 from starlette.responses import StreamingResponse
+import uuid
+from app.core.config import settings
 
 logger = logging.getLogger(__name__)
 
@@ -71,9 +73,26 @@ class MediaService:
             raise HTTPException(status_code=500, detail=f"Failed to retrieve media file: {str(e)}")
 
     async def upload_media(self, file: UploadFile, prefix: str = "post_media"):
-        """Upload media to R2 storage"""
+        """Upload media to R2 storage, fallback to local storage if R2 is not configured."""
         if not self.r2_storage.client:
-             raise HTTPException(status_code=500, detail="R2 storage not configured. Cannot upload.")
+            logger.warning("R2 storage not configured. Falling back to local storage for upload.")
+            uploads_dir = Path("uploads") / prefix
+            uploads_dir.mkdir(parents=True, exist_ok=True)
+            file_extension = Path(file.filename).suffix.lower()
+            unique_filename = f"{file.filename}" if file.filename else f"{uuid.uuid4().hex}{file_extension}"
+            local_path = uploads_dir / unique_filename
+            try:
+                with open(local_path, "wb") as out_file:
+                    content = await file.read()
+                    out_file.write(content)
+                await file.seek(0)
+                logger.info(f"Saved file locally at {local_path}")
+                # Return a URL for local access (assuming static serving from /api/v1/static/)
+                local_url = f"{settings.BASE_URL}{settings.API_V1_STR}/static/{prefix}/{unique_filename}"
+                return local_url
+            except Exception as e:
+                logger.error(f"Failed to save file locally: {str(e)}")
+                raise HTTPException(status_code=500, detail=f"Failed to save file locally: {str(e)}")
         return await self.r2_storage.upload_file(file, prefix)
 
     async def delete_media(self, path: str):

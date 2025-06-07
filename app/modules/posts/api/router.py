@@ -24,9 +24,12 @@ from app.modules.posts.services.post import (
 )
 from app.core.config import settings
 from app.core.storage import r2_storage
+from app.modules.media.service import MediaService
 
 # Create a router that explicitly disables the automatic trailing slash behavior
 router = APIRouter(prefix="")
+
+media_service = MediaService(r2_storage)
 
 @router.get("/", response_model=List[PostWithCounts])
 def read_posts(
@@ -55,8 +58,8 @@ async def _handle_media_upload(media: UploadFile) -> str:
         )
     
     try:
-        # Upload to R2 storage
-        return await r2_storage.upload_file(media, "post_media")
+        # Use MediaService for upload
+        return await media_service.upload_media(media, "post_media")
     except Exception as e:
         logger.error(f"Error uploading media: {str(e)}")
         raise HTTPException(

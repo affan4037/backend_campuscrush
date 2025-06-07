@@ -20,8 +20,10 @@ logger = logging.getLogger("app")
 # Password hashing context
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-def create_access_token(subject: Union[str, Any], expires_delta: Optional[timedelta] = None) -> str:
+def create_access_token(subject: Union[str, Any], expires_delta: Optional[Union[int, timedelta]] = None) -> str:
     if expires_delta:
+        if isinstance(expires_delta, int):
+            expires_delta = timedelta(minutes=expires_delta)
         expire = datetime.utcnow() + expires_delta
     else:
         expire = datetime.utcnow() + timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)

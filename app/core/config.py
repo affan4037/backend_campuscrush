@@ -36,10 +36,10 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql://postgres:root@localhost:5432/campuscrush_db")
     
-    
+     
     # CORS - Updated to include mobile app origins and Railway deployment URL
     BACKEND_CORS_ORIGINS: List[str] = [
-        "http://192.168.0.101:3000",  # Frontend on same network
+        "http://192.168.10.7:3000",  # Frontend on same network
         "http://localhost:3000",     # Local development
         "http://10.0.2.2:3000",      # Android emulator
         "capacitor://localhost",     # Capacitor mobile app

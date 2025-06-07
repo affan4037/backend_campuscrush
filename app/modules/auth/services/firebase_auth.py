@@ -5,6 +5,7 @@ import os
 import time
 from typing import Optional, Dict, Any, Tuple
 from sqlalchemy.orm import Session
+from datetime import timedelta
 
 import firebase_admin
 from firebase_admin import credentials, auth
@@ -185,9 +186,12 @@ def authenticate_with_google(db: Session, google_signin: GoogleSignInRequest) ->
                 user, is_new_user = get_or_create_user_from_google(db, google_data)
                 
                 refresh_mode = google_signin.refresh
+                expires_delta = None
+                if refresh_mode:
+                    expires_delta = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
                 access_token = create_access_token(
                     user.id, 
-                    expires_delta=None if not refresh_mode else settings.ACCESS_TOKEN_EXPIRE_MINUTES
+                    expires_delta=expires_delta
                 )
                 
                 return True, {
@@ -220,9 +224,12 @@ def authenticate_with_google(db: Session, google_signin: GoogleSignInRequest) ->
         
         # Generate auth token - use shorter expiry for refreshes to improve security
         refresh_mode = google_signin.refresh
+        expires_delta = None
+        if refresh_mode:
+            expires_delta = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
         access_token = create_access_token(
             user.id, 
-            expires_delta=None if not refresh_mode else settings.ACCESS_TOKEN_EXPIRE_MINUTES
+            expires_delta=expires_delta
         )
         
         logger.info(f"Google authentication successful for user ID: {user.id}")
