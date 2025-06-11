@@ -39,7 +39,7 @@ class Settings(BaseSettings):
      
     # CORS - Updated to include mobile app origins and Railway deployment URL
     BACKEND_CORS_ORIGINS: List[str] = [
-        "http://192.168.10.7:3000",  # Frontend on same network
+        "http://192.168.10.6:3000",  # Frontend on same network
         "http://localhost:3000",     # Local development
         "http://10.0.2.2:3000",      # Android emulator
         "capacitor://localhost",     # Capacitor mobile app

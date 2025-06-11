@@ -1,1 +1,0 @@
-web: python init_db.py && python run.py --host 0.0.0.0 --port $PORT 

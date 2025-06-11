@@ -93,4 +93,9 @@ async def firebase_status():
         "service_account_file_exists": os.path.exists(service_account_path),
         "firebase_service_account_env_exists": firebase_service_account_exists,
         "firebase_initialized": True  # If the app is running, Firebase was initialized
-    }  
+    }
+
+@router.get("/test-google-signin-alive")
+async def test_google_signin_alive():
+    """Test endpoint to verify deployment and router is active."""
+    return {"status": "google-signin router alive"}  
