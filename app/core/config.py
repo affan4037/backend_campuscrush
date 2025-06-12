@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     VERSION: str = "0.1.0"
 
     # Server URLs
-    BASE_URL: str = os.getenv("BASE_URL", "https://campuscrush-sb89.onrender.com")
+    BASE_URL: str = os.getenv("BASE_URL", "https://backend-campuscrush.onrender.com")
     
     # Security
     SECRET_KEY: str = os.getenv("SECRET_KEY", "development_secret_key")
