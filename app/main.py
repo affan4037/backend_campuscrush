@@ -94,10 +94,10 @@ app.include_router(notifications_router, prefix=f"{settings.API_V1_STR}/notifica
 app.include_router(home_feed_router, prefix=f"{settings.API_V1_STR}/feed", tags=["home feed"])
 app.include_router(media_router)
 
-@app.get("/health")
-def health_check():
-    """Health check endpoint"""
-    return {"status": "ok"}
+# @app.get("/health")
+# def health_check():
+#     """Health check endpoint"""
+#     return {"status": "ok"}
 
 @app.get("/api/health")
 def api_health_check_root():
