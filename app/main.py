@@ -95,14 +95,14 @@ app.include_router(home_feed_router, prefix=f"{settings.API_V1_STR}/feed", tags=
 app.include_router(media_router)
 
 
-@app.get("/health")
-def health_check():
+# @app.get("/health")
+# def health_check():
 
-    return {"status": "ok"}
+#     return {"status": "ok"}
 
-@app.get("/api/health")
-def api_health_check():
-    return {"status": "ok"}
+# @app.get("/api/health")
+# def api_health_check():
+#     return {"status": "ok"}
 
 @app.get("/")
 async def root():
