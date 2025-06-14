@@ -94,7 +94,16 @@ app.include_router(notifications_router, prefix=f"{settings.API_V1_STR}/notifica
 app.include_router(home_feed_router, prefix=f"{settings.API_V1_STR}/feed", tags=["home feed"])
 app.include_router(media_router)
 
-      
+
+# @app.get("/health")
+# def health_check():
+
+#     return {"status": "ok"}
+
+# @app.get("/api/health")
+# def api_health_check():
+#     return {"status": "ok"}
+
 @app.get("/")
 async def root():
     return {
@@ -107,3 +116,4 @@ async def root():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True) 
+                                             
